@@ -286,17 +286,18 @@ bool infix2Postfix::evaluate_ifVar(int &i)
   //Ingresa un token_variable en la cola de tokens
   //Además ingresa el nombre de la variable detectada en la cola de variables
 	
-string entrada;
+float entrada;
 
 if(variable[0]=='$'){
-	cout<<"Ingrese el valor de la variable ";
-	cin>>entrada;
-	variable=entrada;
+cout<<"Ingrese el valor de la variable ";
+cin>>entrada;
+
 }
-	
+
   Map_variables_float[variable]=0.0;
   t_infixExpression.push(token_variable);
   VariableQueue.push(variable);
+  DataQueue.push(entrada);
   return true;
 }//________________________________________________________________
 
