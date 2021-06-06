@@ -118,7 +118,18 @@ float postfixEval::evaluate()
 		}
 		else if (token == token_variable)
 		{
-      throw expressionError("postfixEval: VariableQueue not implemented yet");
+      			if (VariableQueue.empty()) throw expressionError("pstfixEval: VariableQueueo fail");
+
+            		string entrada = VariableQueue.front();
+
+           		cout << "Enter value for ("<< entrada <<"):";
+            		cin>>entrada;	
+			
+			Map_variables_float[entrada]=0.0;
+            		//convertir de string a float para realizar el push
+            		operandStack.push(stof(entrada));
+            		VariableQueue.pop();
+			
 		}
 		else
 		{
