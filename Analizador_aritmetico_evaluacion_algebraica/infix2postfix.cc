@@ -285,14 +285,6 @@ bool infix2Postfix::evaluate_ifVar(int &i)
   //Localiza o crea una $VAR en variables_float
   //Ingresa un token_variable en la cola de tokens
   //Además ingresa el nombre de la variable detectada en la cola de variables
-	
-float entrada;
-
-if(variable[0]=='$'){
-cout<<"Ingrese el valor de la variable ";
-cin>>entrada;
-
-}
 
   Map_variables_float[variable]=0.0;
   t_infixExpression.push(token_variable);
