@@ -269,7 +269,7 @@ bool infix2Postfix::evaluate_ifVar(int &i)
     switch(estado)
     {
       case inicio_variable:
-          if (car != '$') return false;
+          if (car != '$'||(infixExpression[1]>='a' && infixExpression[1]<='z')) return false;
           variable+=car;i++;
           estado=espera_final_variable;
           break;
